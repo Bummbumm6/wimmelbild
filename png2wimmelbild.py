@@ -37,4 +37,4 @@ try:
 except IndexError:
     exit("USAGE: python3 wimmelbild2png.py <file>")
 
-f.write(image)
+f.write(image)  
