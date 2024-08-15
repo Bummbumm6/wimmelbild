@@ -1,5 +1,4 @@
 PyInstaller
 pillow
-re
 json
 numpy
