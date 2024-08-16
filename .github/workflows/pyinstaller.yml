@@ -3,8 +3,6 @@ name: Pyinstaller
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
 permissions:
   contents: read
@@ -43,9 +41,8 @@ jobs:
       with:
         tag_name: ${{ github.event.head_commit.message }}
         release_name: ${{ github.event.head_commit.message }}
-        overwrite: true
         body: |
-          Test Release
+          Built with GitHub Actions automatically on push, be careful.
         draft: false
         prerelease: false
     - name: Upload Release Asset
