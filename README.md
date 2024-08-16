@@ -6,5 +6,4 @@ DOWNLOAD NEWEST VERSION FOR WINDOWS (x86) (not available yet)
 
 DOWNLOAD NEWEST VERSION FOR DEBIAN (aarch64) (not available yet)
 
-
-The stupidest image format created by benfoenix lobby on some date idk
+Image format with Emojis, symbols and letters that is completely pointless other than annoying the hell out of your friends? Count me in!
