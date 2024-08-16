@@ -1,11 +1,12 @@
 name: Pyinstaller
 
-on:
+on: 
   push:
-    branches: [ "main" ]
+    tags:
+    - '*'
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   build-ubuntu:
