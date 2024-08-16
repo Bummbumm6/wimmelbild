@@ -6,6 +6,6 @@
 
 Image format with Emojis, symbols and letters that is completely pointless other than annoying the hell out of your friends? Count me in!
 
-PNG TO Wimmelbild coming soon
+PNG to Wimmelbild coming soon
 
-Sample Wimmelbild files in
+Sample Wimmelbild files inhttps://github.com/Bummbumm6/wimmelbild/tree/main/wimmelbild_samples
