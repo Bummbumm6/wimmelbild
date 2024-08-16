@@ -5,3 +5,7 @@
 32-bit versions will need to be directly run with python or self-built with PyInstaller
 
 Image format with Emojis, symbols and letters that is completely pointless other than annoying the hell out of your friends? Count me in!
+
+PNG TO Wimmelbild coming soon
+
+Sample Wimmelbild files in
