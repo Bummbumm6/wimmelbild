@@ -10,6 +10,8 @@ permissions:
 jobs:
   build-ubuntu:
 
+    environment: env
+    permissions: write-all
     runs-on: ubuntu-latest
 
     steps:
@@ -56,6 +58,8 @@ jobs:
         asset_content_type: application/zip
   build-windows:
 
+    environment: env
+    permissions: write-all
     runs-on: windows-2019
 
     steps:
