@@ -1,11 +1,12 @@
 name: PyinstallerWindows
 
-on:
+on: 
   push:
-    branches: [ "main" ]
+    tags:
+    - '*'
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   build-windows:
