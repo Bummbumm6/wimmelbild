@@ -1,4 +1,4 @@
-name: Pyinstaller
+name: PyinstallerWindows
 
 on:
   push:
