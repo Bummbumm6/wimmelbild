@@ -1,7 +1,4 @@
-# This workflow will install Python dependencies, run tests and lint with a single version of Python
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
-
-name: Python application
+name: Pyinstaller
 
 on:
   push:
@@ -30,9 +27,7 @@ jobs:
         if [ -f action_requirements.txt ]; then pip install -r action_requirements.txt; fi
     - name: Lint with flake8
       run: |
-        # stop the build if there are Python syntax errors or undefined names
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Build for Ubuntu and upload
       run: |
@@ -41,7 +36,27 @@ jobs:
       with:
           name: Ubuntu_Wimmelbildviewer
           path: dist/wimmelbild2png
-
+    - name: Create Release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ github.event.head_commit.message }}
+        release_name: ${{ github.event.head_commit.message }}
+        overwrite: true
+        body: |
+          Test Release
+        draft: false
+        prerelease: false
+    - name: Upload Release Asset
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{steps.create_release.outputs.upload_url}}
+        asset_path: dist/wimmelbild2png.exe
+        asset_name: wimmelbild2png.exe
+        asset_content_type: application/zip
   build-windows:
 
     runs-on: windows-2019
@@ -59,9 +74,7 @@ jobs:
         pip install -r action_requirements.txt
     - name: Lint with flake8
       run: |
-        # stop the build if there are Python syntax errors or undefined names
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Build for Windows and upload
       run: |
@@ -70,4 +83,24 @@ jobs:
       with:
           name: Windows_Wimmelbildviewer
           path: dist/wimmelbild2png.exe
-
+    - name: Create Release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ github.event.head_commit.message }}
+        release_name: ${{ github.event.head_commit.message }}
+        overwrite: true
+        body: |
+          Test Release
+        draft: false
+        prerelease: false
+    - name: Upload Release Asset
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{steps.create_release.outputs.upload_url}}
+        asset_path: dist/wimmelbild2png.exe
+        asset_name: wimmelbild2png.exe
+        asset_content_type: application/zip
