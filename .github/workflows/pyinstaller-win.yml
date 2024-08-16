@@ -42,3 +42,4 @@ jobs:
       with:
         artifacts: "dist/wimmelbild2png.exe"
         allowUpdates: true
+        bodyFile: "body.md"
