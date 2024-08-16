@@ -38,8 +38,6 @@ jobs:
           path: dist/wimmelbild2png
     - name: Create Release
       uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         tag_name: ${{ github.event.head_commit.message }}
         release_name: ${{ github.event.head_commit.message }}
@@ -98,8 +96,6 @@ jobs:
         prerelease: false
     - name: Upload Release Asset
       uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{steps.create_release.outputs.upload_url}}
         asset_path: dist/wimmelbild2png.exe
