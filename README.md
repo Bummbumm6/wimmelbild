@@ -8,4 +8,4 @@ Image format with Emojis, symbols and letters that is completely pointless other
 
 PNG to Wimmelbild coming soon
 
-Sample Wimmelbild files inhttps://github.com/Bummbumm6/wimmelbild/tree/main/wimmelbild_samples
+Sample Wimmelbild files in https://github.com/Bummbumm6/wimmelbild/tree/main/wimmelbild_samples
