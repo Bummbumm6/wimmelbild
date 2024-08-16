@@ -39,3 +39,6 @@ jobs:
           path: dist/wimmelbild2png.exe
     - name: Create Release
       uses: ncipollo/release-action@v1.14.0
+      with:
+        artifacts: "dist/wimmelbild2png.exe"
+        tag: test0
