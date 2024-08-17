@@ -1,3 +1,5 @@
+# Please don't use this except if you're sure you really want to...
+
 from PIL import Image
 import json
 import sys

@@ -32,14 +32,14 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Build for Windows and upload
       run: |
-        python -m PyInstaller wimmelbild2png.spec
+        python -m PyInstaller wimmelbildviewer.spec
     - uses: actions/upload-artifact@v2
       with:
           name: Windows_Wimmelbildviewer
-          path: dist/wimmelbild2png.exe
+          path: dist/wimmelbildviewer.exe
     - name: Create Release
       uses: ncipollo/release-action@v1.14.0
       with:
-        artifacts: "dist/wimmelbild2png.exe"
+        artifacts: "dist/wimmelbildviewer.exe"
         allowUpdates: true
         bodyFile: "body.md"

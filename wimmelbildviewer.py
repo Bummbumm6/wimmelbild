@@ -13,7 +13,7 @@ timer = time()
 try:
     f = open(sys.argv[1], "r+", encoding="utf-8")
 except IndexError:
-    exit("USAGE: python3 wimmelbild2png.py <file>")
+    exit("USAGE: wimmelbildviewer <file>")
 print("Open File: "+str(time()-timer))
 
 timer = time()
