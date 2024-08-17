@@ -170,3 +170,4 @@ cython_debug/
 /*.speci
 /wimmelbildviewer.spec
 !wimmelbild_samples
+/*.gif
