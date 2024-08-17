@@ -32,14 +32,14 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Build for Ubuntu and upload
       run: |
-        python -m PyInstaller wimmelbild2png.spec
+        python -m PyInstaller wimmelbildviewer.spec
     - uses: actions/upload-artifact@v3
       with:
           name: Ubuntu_Wimmelbildviewer
-          path: dist/wimmelbild2png
+          path: dist/wimmelbildviewer
     - name: Create Release
       uses: ncipollo/release-action@v1.14.0
       with:
-        artifacts: "dist/wimmelbild2png"
+        artifacts: "dist/wimmelbildviewer"
         allowUpdates: true
         bodyFile: "body.md"
